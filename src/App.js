@@ -1,21 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-import Header from './components/Layout/Header';
-import Footer from './components/Layout/Footer';
-import Error404 from './components/Error/Error404';
-import About from './components/About/About'
+import React from "react";
+import { HashRouter, Routes, Route } from "react-router-dom";  // Add this
+import About from "./pages/about/About";
+import Home from "./pages/home/Home";
+import NoPage from "./pages/error/NoPage";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <Header />
-      <main>
-        {/* <Error404 /> */}
-        <About />
-      </main>
-      <Footer />
-    </div>
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />  {/* Changed path to root '/' */}
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<NoPage />} />  {/* For 404 page */}
+      </Routes>
+    </HashRouter>
   );
-}
+};
 
 export default App;
