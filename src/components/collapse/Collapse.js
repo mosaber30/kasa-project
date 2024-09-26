@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 
 const Collapse = ({ title, content }) => {
-  //declaration du state en utilisant le Hook useState()
-  const [isOpen, setIsOpen] = useState(false); // je definie le state du toggle (et false par défaut)
+  // Declaration of the state using the useState() Hook
+  const [isOpen, setIsOpen] = useState(false); // I define the state for the toggle (set to false by default)
 
-  //fonction pour gérer l'afichage du contenu des collapses
+  // Function to handle the display of the collapse content
   const display = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    // affiche le collapse replié par défaut et l'ouvre au clic puis le referme au clic en faisant disparaitre le texte et le style
+    // Displays the collapsed section by default and opens it on click, then closes it again on click, hiding the text and style
     <div className="collapse__dropdown__container">
       <div className="collapse__dropdown__title">
         <h2>{title}</h2>
@@ -22,7 +22,7 @@ const Collapse = ({ title, content }) => {
           )}
         </p>
       </div>
-      {/* Si le collapse est à TRUE alors il affichera la description */}
+      {/* If the collapse state is TRUE, it will display the description */}
       <div className="collapse__dropdown__content">
         {isOpen && <p>{content}</p>}
       </div>
