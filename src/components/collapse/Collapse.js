@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Collapse = ({ title, content }) => {
   // Declaration of the state using the useState() Hook
@@ -29,5 +30,6 @@ const Collapse = ({ title, content }) => {
     </div>
   );
 };
+
 
 export default Collapse;
