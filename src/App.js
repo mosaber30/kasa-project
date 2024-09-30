@@ -9,9 +9,9 @@ const App = () => {
   return (
     <HashRouter>
       <Routes>
-        <Route path="/" element={<Home />} />  {/* Changed path to root '/' */}
+        <Route path="/" element={<Home />} />  
         <Route path="/about" element={<About />} />
-        <Route path="*" element={<NoPage />} />  {/* For 404 page */}
+        <Route path="*" element={<NoPage />} /> 
       </Routes>
     </HashRouter>
   );
