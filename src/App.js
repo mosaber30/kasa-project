@@ -1,6 +1,6 @@
 import React from "react";
-import { HashRouter, Routes, Route } from "react-router-dom";  
-import "./styles/app.scss"
+import "./styles/app.scss";
+import { Routes, Route, Navigate, HashRouter } from "react-router-dom";
 import About from "./pages/about/About";
 import Home from "./pages/home/Home";
 import NoPage from "./pages/error/NoPage";
@@ -9,12 +9,14 @@ const App = () => {
   return (
     <HashRouter>
       <Routes>
-        <Route path="/" element={<Home />} />  
+        <Route path="/" element={<Navigate replace to="/accueil" />} />
+        <Route path="/accueil" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="*" element={<NoPage />} /> 
+        <Route path="*" element={<NoPage />} />
       </Routes>
     </HashRouter>
   );
 };
 
 export default App;
+

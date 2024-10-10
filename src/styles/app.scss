@@ -1,6 +1,11 @@
 @import "./cross/settings";
-@import "../styles/layout/footer";
+@import "../styles/components/nav";
 @import "../styles/layout/header";
+@import "../styles/components/banner";
+@import "../styles/components/gallery";
+@import "../styles/components/card";
+@import "../styles/layout/footer";
 @import "../styles/components/collapse";
-@import "./components/nav";
-@import "./components/carrousel"
+@import "../styles/components/carrousel";
+@import "../styles/components/_noPage";
+
