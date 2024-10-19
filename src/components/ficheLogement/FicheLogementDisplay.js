@@ -8,7 +8,7 @@ import Rate from "./Rate";
 import Host from "./Host";
 
 const FicheLogementDisplay = () => {
-  /* Récupère la bonne fiche */
+  /* Retrieves the correct sheet */
   const { id } = useParams();
 
   const ficheLogement = DataFichLogement.find((logement) => logement.id === id);

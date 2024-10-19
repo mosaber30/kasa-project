@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 
 function Carrousel({ slides }) {
-  /* Crée un Hook d'état */
-  const [current, setCurrent] = useState(0); //je définie l'index du premier slide à 0
-  const length = slides.length; //longueur du tableau de slides
+  /* Creates a state hook */
+  const [current, setCurrent] = useState(0); //I set the index of the first slide to 0
+  const length = slides.length; //Length of the slides array
 
-  /**Function pour l'image precedente */
+  /**Function for the previous image  */
   const nextImage = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1); // on repart au premier slide quand on arrive au dernier
+    setCurrent(current === length - 1 ? 0 : current + 1); // We go back to the first slide when we reach the last one
   };
-  /**Function pour l'image suivante */
+  /**Function for the next image */
   const prevImage = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1); // on repart au dernier slide quand on est au premier
+    setCurrent(current === 0 ? length - 1 : current - 1); // We go back to the last slide when we are at the first one
   };
 
   if (!Array.isArray(slides) || slides.length <= 0) {
