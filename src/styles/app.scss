@@ -1,4 +1,13 @@
+// Font
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,400;1,500;1,700&display=swap");
+body {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+//   Setting
 @import "./cross/settings";
+
+
 @import "../styles/components/nav";
 @import "../styles/layout/header";
 @import "../styles/components/banner";
@@ -8,4 +17,5 @@
 @import "../styles/components/collapse";
 @import "../styles/components/carrousel";
 @import "../styles/components/_noPage";
-@import "../styles/components/ficheLogementDisplay"
+@import "../styles/components/ficheLogementDisplay";
+

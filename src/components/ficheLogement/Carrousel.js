@@ -20,12 +20,12 @@ function Carrousel({ slides }) {
   return (
     <section className="slide">
       {length > 1 && (
-        <p className="left-Arrow" onClick={prevImage}>
+        <p className="left-Arrow arrow left" onClick={prevImage}>
           <i className="fa-solid fa-chevron-left"></i>
         </p>
       )}
       {length > 1 && (
-        <p className="right-Arrow" onClick={nextImage}>
+        <p className="right-Arrow arrow right" onClick={nextImage}>
           <i className="fa-solid fa-chevron-right"></i>
         </p>
       )}

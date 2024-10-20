@@ -10,7 +10,6 @@ import Host from "./Host";
 const FicheLogementDisplay = () => {
   /* Retrieves the correct sheet */
   const { id } = useParams();
-
   const ficheLogement = DataFichLogement.find((logement) => logement.id === id);
 
   /* Tags */

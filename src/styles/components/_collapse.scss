@@ -19,7 +19,8 @@
         margin: 0 auto;
         margin-top: 1.5em;
         border-radius: 5px;
-  
+        
+
         @media screen and (min-width: $breakpoint-desktop) {
           width: 100%;
         }
@@ -35,6 +36,7 @@
           }
         }
       }
+      
       &__content {
         background-color: $secondary-color;
         width: 100%;
