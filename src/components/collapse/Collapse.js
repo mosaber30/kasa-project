@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Collapse = ({ title, content }) => {
-  const [isOpen, setIsOpen] = useState(false); // Keep the initial state as true
+  const [isOpen, setIsOpen] = useState(false); // Keep the initial state as false
 
   const toggleCollapse = () => {
     setIsOpen(!isOpen);
