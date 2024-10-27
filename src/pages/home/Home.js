@@ -3,7 +3,7 @@ import Banner from "../../components/banner/Banner";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
 import imgHomeBanner from "../../assets/images/banner/homeBanner.png";
-import Gallery from "../../components/gallery/Gallery";
+import Gallery from "../../components/LogementDetails/Gallery";
 
 const Home = () => {
   return (

@@ -26,7 +26,7 @@
     }
     &__Link {
       @extend %flex-end;
-      color: $primary-color;
+      color: $footer-color;
       @include font(14px, 500);
       margin: 3rem 0 2rem 0;
   
