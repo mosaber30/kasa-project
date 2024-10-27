@@ -1,27 +1,31 @@
 .nav-header {
-    @include flex-end;
-    text-transform: uppercase;
-  
+  @include flex-end;
+  text-transform: uppercase;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    text-transform: none;
+  }
+
+  &__nav-link-home,
+  &__nav-link-about {
+    @include font-right(12px);
+    color: $footer-color;
+    text-decoration: none;
+    padding-left: 0.8rem;
+
     @media screen and (min-width: $breakpoint-desktop) {
-      text-transform: none;
+      @include font-right(24px);
+      padding-left: 3.5rem;
     }
-  
-     &__nav-link-home,
-    &__nav-link-about {
-      @include font-right(12px);
-      color: $footer-color;
-      text-decoration: none;
-      padding-left: 0.8rem;
-  
-      @media screen and (min-width: $breakpoint-desktop) {
-        @include font-right(24px);
-        padding-left: 3.5rem;
-      }
-  
-      &:hover,
-      &:focus {
-        text-decoration-line: underline;
-      }
+
+    &:hover,
+    &:focus {
+      text-decoration-line: underline;
+    }
+
+    &.active {
+      color: $primary-color; // Change the color to indicate active state
+      font-weight: bold;     // Make the active link bold
     }
   }
-  
+}

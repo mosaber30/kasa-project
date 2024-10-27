@@ -1,34 +1,39 @@
 import React, { useState } from "react";
 
 function Carrousel({ slides }) {
-  /* Creates a state hook */
-  const [current, setCurrent] = useState(0); //I set the index of the first slide to 0
-  const length = slides.length; //Length of the slides array
+  const [current, setCurrent] = useState(0); // State to track the current slide
+  const length = slides.length; // Total number of slides
 
-  /**Function for the previous image  */
+  // Function to go to the next slide
   const nextImage = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1); // We go back to the first slide when we reach the last one
-  };
-  /**Function for the next image */
-  const prevImage = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1); // We go back to the last slide when we are at the first one
+    setCurrent(current === length - 1 ? 0 : current + 1); // Loop back to the first slide if at the end
   };
 
+  // Function to go to the previous slide
+  const prevImage = () => {
+    setCurrent(current === 0 ? length - 1 : current - 1); // Loop back to the last slide if at the beginning
+  };
+
+  // Return null if there are no slides to display
   if (!Array.isArray(slides) || slides.length <= 0) {
     return null;
   }
+
   return (
     <section className="slide">
+      {/* Render the left arrow if there is more than one slide */}
       {length > 1 && (
-        <p className="left-Arrow arrow left" onClick={prevImage}>
+        <div className="arrow arrow-left" onClick={prevImage}>
           <i className="fa-solid fa-chevron-left"></i>
-        </p>
+        </div>
       )}
+      {/* Render the right arrow if there is more than one slide */}
       {length > 1 && (
-        <p className="right-Arrow arrow right" onClick={nextImage}>
+        <div className="arrow arrow-right" onClick={nextImage}>
           <i className="fa-solid fa-chevron-right"></i>
-        </p>
+        </div>
       )}
+      {/* Loop through each slide and display it if it is the current slide */}
       {slides.map((image, index) => {
         return (
           <div
@@ -38,6 +43,7 @@ function Carrousel({ slides }) {
             {index === current && (
               <img src={image} alt="img-appartement" className="slide__image" />
             )}
+            {/* Display the slide number if it is the current slide and there are multiple slides */}
             {index === current && length > 1 && (
               <span className="slider__number">
                 {current + 1}/{length}
