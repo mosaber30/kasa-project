@@ -7,24 +7,15 @@ function Rate(props) {
       const score = props.score;
     const notes = [1, 2, 3, 4, 5];
     return (
-      <div className="rate-contenair">
+      <div className="rate-container">
         {notes.map((note) =>
-          score >= note ? (
             <img
               key={note.toString()}
               className="etoile"
-              src={emptyStar}
+              src={score >= note ? emptyStar : fullStar} // ternary condition to check of the star will be blue or grey
               alt="star"
             />
-          ) : (
-            <img
-              key={note.toString()}
-              className="etoile"
-              src={fullStar}
-              alt="star"
-            />
-          )
-        )}
+          )}
       </div>
     );
 }

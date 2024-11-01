@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 export default function NoPage() {
   return (
     <>
@@ -7,9 +7,9 @@ export default function NoPage() {
         <p className="errorContainer__Text">
           Oups! La page que vous demandez n'existe pas.
         </p>
-        <NavLink to="/" className="errorContainer__Link">
+        <Link to="/" className="errorContainer__Link">
           Retourner sur la page d'accueil
-        </NavLink>
+        </Link>
       </div>
     </>
   );

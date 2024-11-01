@@ -19,13 +19,9 @@
     }
 
     &:hover,
-    &:focus {
-      text-decoration-line: underline;
-    }
-
+    &:focus,
     &.active {
-      color: $primary-color; // Change the color to indicate active state
-      font-weight: bold;     // Make the active link bold
+      text-decoration-line: underline;
     }
   }
 }

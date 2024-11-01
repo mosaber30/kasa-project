@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logements from "../../data/logements.json";
 import Card from "../cards/Card";
 
-const Gallery = () => {
+const Grid = () => {
   return (
     <div className="home_gallery">
       {logements.map((logement) => {
@@ -19,4 +19,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default Grid;

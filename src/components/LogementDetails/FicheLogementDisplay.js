@@ -1,4 +1,4 @@
-//import React, { useState } from "react";
+import React from "react";
 import { useParams, Navigate } from "react-router-dom";
 import DataFichLogement from "../../data/logements.json";
 import Tag from "./Tag";
@@ -9,7 +9,8 @@ import Host from "./Host";
 
 const FicheLogementDisplay = () => {
   /* Retrieves the correct sheet */
-  const { id } = useParams();
+  const { id } = useParams(); // get the id from url
+
   const ficheLogement = DataFichLogement.find((logement) => logement.id === id);
 
   /* Tags */

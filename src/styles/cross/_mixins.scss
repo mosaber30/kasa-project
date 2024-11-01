@@ -67,7 +67,8 @@
     display: flex;
     position: absolute;
     font-size: 1.5rem;
-    top: 42%;
+    top: 50%;
+    transform: translateY(-50%);
     right: 2%;
     width: 12px;
     height: 20px;
@@ -78,7 +79,6 @@
     @media screen and (min-width: $breakpoint-desktop) {
       width: 47px;
       height: 79px;
-      top: 42%;
       font-size: 4.5rem;
     }
   }
@@ -87,7 +87,8 @@
     display: flex;
     position: absolute;
     font-size: 1.5rem;
-    top: 42%;
+    top: 50%;
+    transform: translateY(-50%);
     left: 2%;
     height: 20px;
     width: 12px;
