@@ -3,7 +3,7 @@ import { useParams, Navigate } from "react-router-dom";
 import DataFichLogement from "../../data/logements.json";
 import Tag from "./Tag";
 import Collapse from "../collapse/Collapse";
-import Carrousel from "./Carrousel";
+import Gallery from "./Gallery";
 import Rate from "./Rate";
 import Host from "./Host";
 
@@ -31,7 +31,7 @@ const tagsLogement = ficheLogement?.tags.map((tag, i) => {
     <>
       {ficheLogement ? (
         <div className="Fiche-container">
-          <Carrousel slides={ficheLogement?.pictures} />
+          <Gallery slides={ficheLogement?.pictures} />
           <section className="Fiche-logement">
             <div className="description-info">
               <div className="description-info__titletags">
